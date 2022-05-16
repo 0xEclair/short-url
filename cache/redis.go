@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"time"
-	
+
 	redis "github.com/go-redis/redis/v8"
 )
 
@@ -27,7 +27,7 @@ func InitializeStore() *StorageService {
 		Password: "",
 		DB:       0,
 	})
-	
+
 	pong, err := redisClient.Ping(ctx).Result()
 	if err != nil {
 		panic(fmt.Sprintf("Error init Redis: %v", err))
