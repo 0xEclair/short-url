@@ -6,11 +6,11 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"short-url/api"
-	"short-url/cache"
+	"short-url/model"
 )
 
 func main() {
-	cache.InitializeStore()
+	model.Init()
 
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
