@@ -19,7 +19,9 @@ func main() {
 		})
 	})
 
-	r.POST("/api/v1/save", api.ShortUrl)
+	r.POST("/api/v1/save", api.Save)
+
+	r.GET("/api/v1/retrieve", api.Retrieve)
 
 	err := r.Run(":9808")
 	if err != nil {
